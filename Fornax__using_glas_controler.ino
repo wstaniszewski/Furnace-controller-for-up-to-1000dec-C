@@ -43,7 +43,7 @@ int potpin = 0;  // analog pin used to connect the potentiometer  ????
 int val;    // variable to read the value from the analog pin  ??????
 
 //  relay controll
-int relay_pin_1 = 15; // pin do przekaŸnika  
+int relay_pin_1 = 22; // pin do przekaŸnika  
 int relay_pin_2 = 14;  // pin do przekaŸnika zapas
 
 
@@ -177,7 +177,7 @@ void loop() {
    // Serial.println(thermocouple.readInternal());
 
   //zakladka:   
-    int  c = thermocouple.readCelsius();   // orginalnie by³o zamiast int - double i taj jest bardziej prawid³owo, ale mi te 10te stopnia tylko przeszkadzaj¹
+    int  c = thermocouple.readCelsius();   // orginalnie by³o zamiast int - double i tak jest bardziej prawid³owo, ale mi te 10te stopnia tylko przeszkadzaj¹
 
    //  if (c==0) 
    //{goto zakladka;}
@@ -277,7 +277,7 @@ void loop() {
 
     // SEGMENT   HOLD  2
 
-    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1)) and (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2))) //  istotny jest tylko czas
+    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1)) && (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2))) //  istotny jest tylko czas
   //if ((millis() <= (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas - wersja uproszczona (bo pierwszy warunek (milis > dur t H0) jest i tak sprawdzony skoro program przeszed³ do sprawdzania drugiego warunku if. opiero sie to na za³o¿eniu ¿e  if przestaje sprawdzaæ warunki po znalezieniu pierwszego pasuj¹cego
 
 
@@ -309,7 +309,7 @@ void loop() {
 
     // SEGMENT   HOLD  3
 
-    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2)) and (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3))) //  istotny jest tylko czas
+    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2)) && (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3))) //  istotny jest tylko czas
   //if ((millis() <= (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas - wersja uproszczona (bo pierwszy warunek (milis > dur t H0) jest i tak sprawdzony skoro program przeszed³ do sprawdzania drugiego warunku if. opiero sie to na za³o¿eniu ¿e  if przestaje sprawdzaæ warunki po znalezieniu pierwszego pasuj¹cego
 
 
@@ -343,7 +343,7 @@ void loop() {
 
     // SEGMENT   HOLD  4
 
-    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3)) and (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3 + duration_time_HOLD4))) //  istotny jest tylko czas
+    if ((millis() > (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3)) && (millis() < (duration_time_HOLD0 + duration_time_HOLD1 + duration_time_HOLD2 + duration_time_HOLD3 + duration_time_HOLD4))) //  istotny jest tylko czas
   //if ((millis() <= (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas - wersja uproszczona (bo pierwszy warunek (milis > dur t H0) jest i tak sprawdzony skoro program przeszed³ do sprawdzania drugiego warunku if. opiero sie to na za³o¿eniu ¿e  if przestaje sprawdzaæ warunki po znalezieniu pierwszego pasuj¹cego
 
 
