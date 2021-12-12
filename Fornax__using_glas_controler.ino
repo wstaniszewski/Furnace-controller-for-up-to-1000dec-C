@@ -98,7 +98,7 @@ int ramp_temp_diff1 = 1;
 float ramp_time1 = 1;
 int ramp1_speed = 10;  // stopni na minutê (600 stopni na godzinê)
 
-// Example creating a thermocouple instance with software SPI on any three
+//  creating a thermocouple instance with software SPI on any three
 // digital IO pins.
 #define MAXDO   41
 #define MAXCS   43
@@ -107,7 +107,7 @@ int ramp1_speed = 10;  // stopni na minutê (600 stopni na godzinê)
 // Initialize the Thermocouple
 Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
 
-// nie wiem co to
+// nie wiem co to todo
 #if defined(ARDUINO_ARCH_SAMD)
 // for Zero, output on USB Serial console, remove line below if using programming port to program the Zero!
 #define Serial SerialUSB
