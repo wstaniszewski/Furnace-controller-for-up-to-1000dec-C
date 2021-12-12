@@ -241,7 +241,7 @@ void loop() {
 
     // SEGMENT   HOLD  1
 
-    if ((millis() > (duration_time_HOLD0)) and (millis() < (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas
+    if ((millis() > (duration_time_HOLD0)) && (millis() < (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas
   //if ((millis() <= (duration_time_HOLD0 + duration_time_HOLD1))) //  istotny jest tylko czas - wersja uproszczona (bo pierwszy warunek (milis > dur t H0) jest i tak sprawdzony skoro program przeszed³ do sprawdzania drugiego warunku if. opiero sie to na za³o¿eniu ¿e  if przestaje sprawdzaæ warunki po znalezieniu pierwszego pasuj¹cego
 
 
