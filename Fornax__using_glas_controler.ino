@@ -118,7 +118,7 @@ Adafruit_MAX31855 thermocouple(MAXCLK, MAXCS, MAXDO);
 void setup() {
     Serial.begin(9600);
 
-    //termopara
+    //termopara   
 #ifndef ESP8266
     while (!Serial);     // will pause Zero, Leonardo, etc until serial console opens
 #endif
