@@ -1,10 +1,7 @@
 /*
-* 
-* 
-* 
-* 
 
-2022-01-04   
+
+    2022-01-04
 
 LCD
 
@@ -62,19 +59,19 @@ long int czas_poczatku_SEG_HOLD = 0;       //czas milis muszi mieæ zmienne jako 
 // sprogram startuje kilka sekund po inicjalizacji mikrokontrolera - ta zmienna to koryguje - normalnie to nie powinno mieæ znaczenia
 
 // tu zadajesz czasy trwania segmentów HOLD w   MINUTACH!!!!!!!!!! -dlatego jest * 60 0000 :)
-long int duration_time_HOLD0 = 40 * 60000;   //20 min na styk ledw starcza na zimnym piecu  30 min bezpiecznie
-long int duration_time_HOLD1 = 25 * 60000;    // 15 minut  na dojscie z 800 stopni do 1000 + czas wlaœciwy 
-long int duration_time_HOLD2 = 30 * 60000;    // 
-long int duration_time_HOLD3 = 60 * 60000;         //   2x d³uzej
-long int duration_time_HOLD4 = 60 * 60000;            // 2x d³uzej
+long int duration_time_HOLD0 = 1 * 60000;   //20 min na styk ledw starcza na zimnym piecu  30 min bezpiecznie
+long int duration_time_HOLD1 = 1 * 60000;    // 15 minut  na dojscie z 800 stopni do 1000 + czas wlaœciwy 
+long int duration_time_HOLD2 = 1 * 60000;
+long int duration_time_HOLD3 = 1 * 60000;
+long int duration_time_HOLD4 = 1 * 60000;
 
 
 //  tu zadajesz temperatury segmentów HOLD
-int temp_HOLD0 = 700;     // preheating
-int temp_HOLD1 = 900;     // Fusing    850 full fuse 700 tack fuse
-int temp_HOLD2 = 600;      // Annealing a 
-int temp_HOLD3 = 550;      // Annealing b
-int temp_HOLD4 = 450;      // Annealing c
+int temp_HOLD0 = 70;     // preheating
+int temp_HOLD1 = 90;     // Fusing    850 full fuse 700 tack fuse
+int temp_HOLD2 = 60;      // Annealing a 
+int temp_HOLD3 = 55;      // Annealing b
+int temp_HOLD4 = 45;      // Annealing c
 
 // zmienne techniczne HOLD I RAMP
 long int endtime_ramp1 = 1;    // zmienna techniczna
@@ -210,11 +207,13 @@ void loop() {
 
     if (count == 100) {
         count = 0;
-        Serial.print(czas);
+        // Serial.print(czas);
 
 
-        //  Serial.print(czas/60);
-        Serial.print(',');
+         //  Serial.print(czas/60);
+         //Serial.print(',');
+        // Serial.println(c);
+
         Serial.println(c);
 
     }
