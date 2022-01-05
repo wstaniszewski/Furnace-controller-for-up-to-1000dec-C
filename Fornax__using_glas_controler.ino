@@ -1,24 +1,11 @@
 /*
 
 
-    2022-01-04
+    2022-01-05
 
 LCD
 
 
-  The circuit:
- * LCD RS pin to digital pin 12
- * LCD Enable pin to digital pin 11
- * LCD D4 pin to digital pin 5
- * LCD D5 pin to digital pin 4
- * LCD D6 pin to digital pin 3
- * LCD D7 pin to digital pin 2
- * LCD R/W pin to ground
- * LCD VSS pin to ground
- * LCD VCC pin to 5V
- * 10K resistor:
- * ends to +5V and ground
- * wiper to LCD VO pin (pin 3)
 
  Library originally added 18 Apr 2008
  by David A. Mellis
@@ -49,14 +36,18 @@ int val;    // variable to read the value from the analog pin  ??????
 int relay_pin_1 = 22; // pin do przekaŸnika  
 int relay_pin_2 = 14;  // pin do przekaŸnika zapas
 
-
 // Zmienne
-
 int set_temp = 1;      //  zmienna aktualna nastwawa temp
 long int count = 1;   // zmienna do wyswielaania serialem  co zadany czas
-
 long int czas_poczatku_SEG_HOLD = 0;       //czas milis muszi mieæ zmienne jako long bo to wielkie licznby
 // sprogram startuje kilka sekund po inicjalizacji mikrokontrolera - ta zmienna to koryguje - normalnie to nie powinno mieæ znaczenia
+
+
+
+
+
+
+
 
 // tu zadajesz czasy trwania segmentów HOLD w   MINUTACH!!!!!!!!!! -dlatego jest * 60 0000 :)
 long int duration_time_HOLD0 = 1 * 60000;   //20 min na styk ledw starcza na zimnym piecu  30 min bezpiecznie
@@ -72,6 +63,12 @@ int temp_HOLD1 = 90;     // Fusing    850 full fuse 700 tack fuse
 int temp_HOLD2 = 60;      // Annealing a 
 int temp_HOLD3 = 55;      // Annealing b
 int temp_HOLD4 = 45;      // Annealing c
+
+
+
+
+
+
 
 // zmienne techniczne HOLD I RAMP
 long int endtime_ramp1 = 1;    // zmienna techniczna
